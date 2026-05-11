@@ -139,3 +139,11 @@ header > p {
   cursor: pointer;
 
 }
+
+.keyboard-container button.correct-char{
+  background-color: #10A95B;
+}
+
+.keyboard-container button.wrong-char{
+  background-color: #EC5D49;
+}

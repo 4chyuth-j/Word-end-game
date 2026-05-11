@@ -1,9 +1,12 @@
 
-const Letters = ({word}) => {
+const Letters = ({word,guessedLetters}) => {
   
   const letterElements = word.split("").map((c,ind)=>{
+    const isFound = guessedLetters.includes(c.toUpperCase());
     return (
-      <span key={ind} className="letter">{c.toUpperCase()}</span>
+      <span key={ind} className="letter">
+         {isFound?c.toUpperCase():""}
+      </span>
     )
   })
 

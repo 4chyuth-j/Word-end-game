@@ -11,7 +11,6 @@ function App() {
 
   const [currentWord,setCurrentWord] = useState("react");
   const [guessedLetters,setGuessedLetters] = useState([]);
-  console.log(guessedLetters);
 
   function handleKeyboardClick(letter){
     setGuessedLetters(curr=>(
@@ -26,9 +25,20 @@ function App() {
         <p>Guess the word within 8 attempts to keep the programming world safe from Assembly!</p>
       </header>
       <Status />
+
       <Programs />
-      <Letters word={currentWord} />
-      <Keyboard clickHandler={handleKeyboardClick} />
+      
+      <Letters
+        word={currentWord} 
+        guessedLetters={guessedLetters}
+      />
+
+      <Keyboard 
+          guessedLetters={guessedLetters}
+          clickHandler={handleKeyboardClick} 
+          word={currentWord.toUpperCase()}
+      />
+
       <button className="newgame-button">New Game</button>
     </main>
   )
