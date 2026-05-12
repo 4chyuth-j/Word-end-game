@@ -1,16 +1,107 @@
-# React + Vite
+# Assembly: Endgame 🎮
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun word guessing game built with React where you must save the programming world from Assembly by guessing the hidden word within **8 attempts**.
 
-Currently, two official plugins are available:
+## 🚀 Live Gameplay
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Guess the correct word letter by letter using the on-screen keyboard.
 
-## React Compiler
+* ✅ Correct guesses reveal letters
+* ❌ Wrong guesses eliminate programming languages
+* ☠️ Each wrong attempt brings Assembly closer
+* 🎉 Win by revealing the full word before all 8 attempts are used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📸 Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Game Over Screen
+
+![Game Over](./screenshots/gameover.png)
+
+### Gameplay
+
+![Gameplay](./screenshots/gameplay.png)
+
+### GameWon
+![Gamewon](./screenshots/gamewon.png)
+
+
+---
+
+## 🛠️ Built With
+
+* React
+* Vite
+* JavaScript
+* CSS Grid & Flexbox
+* clsx
+
+---
+
+## ✨ Features
+
+* Responsive on-screen keyboard
+* Dynamic game status messages
+* Random farewell texts for eliminated languages
+* Win/Loss game states
+* Conditional styling using clsx
+* Fully responsive UI
+* Random word generation
+
+---
+
+## 📂 Project Structure
+
+```txt
+src/
+│
+├── Components/
+│   ├── Keyboard.jsx
+│   ├── Letters.jsx
+│   ├── Programs.jsx
+│   └── Status.jsx
+│
+├── utils/
+│   ├── languages.js
+│   ├── fareWellTexts.js
+│   └── words.js
+│
+├── App.jsx
+└── index.css
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/4chyuth-j/Word-end-game
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🎯 Future Improvements
+
+* Add difficulty levels
+* Add animations and sound effects
+* Track score and streaks
+* Add mobile keyboard support
+* Add timer mode
+
+---
+
