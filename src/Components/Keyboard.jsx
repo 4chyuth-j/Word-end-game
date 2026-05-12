@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-const Keyboard = ({clickHandler,guessedLetters,word}) => {
+const Keyboard = ({clickHandler,guessedLetters,word,isGameOver}) => {
     const keyChar = [
         "A", "B", "C", "D", "E", "F", "G",
         "H", "I", "J", "K", "L", "M", "N",
@@ -18,7 +18,14 @@ const Keyboard = ({clickHandler,guessedLetters,word}) => {
        }); 
 
        return(
-             <button className={generatedClass} onClick={()=>clickHandler(char)} key={char}>{char}</button>
+             <button
+               className={generatedClass} 
+               onClick={()=>clickHandler(char)} 
+               key={char}
+               disabled={isGameOver}
+             >
+                {char}
+            </button>
        )
     });
 

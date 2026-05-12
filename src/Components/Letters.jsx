@@ -1,11 +1,17 @@
+import clsx from "clsx";
 
-const Letters = ({word,guessedLetters}) => {
+const Letters = ({word,guessedLetters,isGameLost}) => {
   
   const letterElements = word.split("").map((c,ind)=>{
     const isFound = guessedLetters.includes(c.toUpperCase());
+    const letterClassName = clsx({
+      "letter":true,
+      "missed-letter":isGameLost && !isFound,
+    })
+    
     return (
-      <span key={ind} className="letter">
-         {isFound?c.toUpperCase():""}
+      <span key={ind} className={letterClassName}>
+         {isFound || isGameLost?c.toUpperCase():""}
       </span>
     )
   })
